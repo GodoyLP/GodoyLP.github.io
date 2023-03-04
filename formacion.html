@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Luis Godoy</title>
+
+  <!-- CSS Bootstrap Versión 5.2 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <!-- JS Bootstrap v5.2 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+  </script>
+
+  <!--Bosstrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- CSS de Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!--muestra icono alado del nombre de la pestaña-->
+  <link rel="icon" href="icono LG.jpg" type="image/png" sizes="16x16">
+
+  <!--para grafico circular-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+
+  <!--Cotenedor de iconos-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="myProjects/webProject/icofont/css/icofont.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+  <!--Estilos de Letras-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+  <!--Mis estilos -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylesPaginas.css">
+
+  <!--Mis javaScript-->
+  <script src="myscript.js"></script>
+  <script src="formacion.js"></script>
+
+</head>
+
+<body>
+
+  <!-- INICO ENCABEZADO -->
+  <header class="encabezado">
+    <nav class="container">
+      <div class="row">
+        <!--Menu desplegable-->
+        <div class="dropdown">
+          <button class="btn btn btn-link dropdown-toggle bi bi-journal-arrow-down" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item btn btn-link bi bi-house-door" id="homeBtn"> Inicio</a></li>
+            <li><a class="dropdown-item btn btn-link bi bi-person-lines-fill" id="datoPersonalBtn"> Datos Personales</a>
+            </li>
+            <li><a class="dropdown-item btn btn-link bi bi-journal-code" id="experienciaBtn">Experiencias</a></li>
+            <li><a class="dropdown-item btn btn-link bi bi-mortarboard" id="formacionBtn">Academico</a></li>
+          </ul>
+          <!--Script de botonoes iconos menu desplegable-->
+          <script>
+            document.getElementById("formacionBtn").onclick = formacion;
+            document.getElementById("experienciaBtn").onclick = experiencia;
+            document.getElementById("datoPersonalBtn").onclick = datosPersoanles;
+            document.getElementById("homeBtn").onclick = home;
+          </script>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- FIN ENCABEZADO -->
+
+  <!-- INICIO PAGINA -->
+  <div class="secundaria-pagina">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 rounded-3">
+          <div class="pb-5"></div>
+          <!--espacio sepracioen entre las dos columnas pb-3 y  -->
+          <div class="pb-3">
+            <div class="text-center">
+              <img src="foto_Luis.png" alt="Imagen del postulante" class="rounded-circle img-fluid">
+              <h3><br>
+                <script>
+                  nombreCompleto()
+                </script>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 rounded-3">
+          <div class=" row">
+            <div class="col">
+              <div class="card">
+                <div class="card-title shadow p-3 mb-5 rounded">
+                  FORMACION ACADEMICA
+                </div>
+                <div class="card-body">
+                  <h5 class="card-subtitle">2011 - 2020.<br>Analista de sistemas de computación</h5>
+                  <p class="card-text"> Instituto ORT. (3 ultimas materias)</p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-subtitle">1991 - 1998<br>Técnico mecánico Institución.</h5>
+                  <p class="card-text">Escuela educación técnica N°2 </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card-title shadow p-3 mb-5 rounded">
+                CURSOS / CONOCIMENTO
+              </div>
+              <div class="card-body">
+                <br>
+                <script>
+                  conocimientoCurso(0)
+                </script>
+                <div class="progress">
+                  <div id="progresoIngles" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(1)
+                </script>
+                <div class="progress">
+                  <div id="progresoOffice" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(2)
+                </script>
+                <div class="progress">
+                  <div id="progresoNavegadores" class="progress-bar" role="progressbar" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(3)
+                </script>
+                <div class="progress">
+                  <div id="progresoDos" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(4)
+                </script>
+                <div class="progress">
+                  <div id="progresoLinux" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(5)
+                </script>
+                <div class="progress">
+                  <div id="progresoWin" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(6)
+                </script>
+                <div class="progress">
+                  <div id="progresoHtml" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(7)
+                </script>
+                <div class="progress">
+                  <div id="progresoSql" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(8)
+                </script>
+                <div class="progress">
+                  <div id="progresoAbpa" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(9)
+                </script>
+                <div class="progress">
+                  <div id="progresoCmasmas" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(10)
+                </script>
+                <div class="progress">
+                  <div id="progresoJava" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(11)
+                </script>
+                <div class="progress">
+                  <div id="progresoUml" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <br>
+                <script>
+                  conocimientoCurso(12)
+                </script>
+                <div class="progress">
+                  <div id="progresoRedes" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FIN PAGINA -->
+
+  <!-- INICIO PIE DE PÁGINA -->
+  <footer class="text-center text-white">
+    <!-- inicio container -->
+    <div class="container pt-2">
+      <!-- Inicio Section: Social media -->
+      <section class="mb-4">
+        <!-- Home -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i id="homeBtnGr" class="btn btn-link bi bi-house-door" title="Home"></i>
+          <script>
+            document.getElementById("homeBtnGr").onclick = home;
+          </script>
+        </a>
+
+        <!-- Gamil -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i id="emailBtnGr" class="btn btn-link bi bi-envelope" title="Gamil"></i>
+          <script>
+            document.getElementById("emailBtnGr").onclick = gmail;
+          </script>
+        </a>
+
+        <!-- Telegram-->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i id="telegrampBtnGr" class="btn btn-link bi bi-telegram" title="Telegram"></i>
+          <script>
+            document.getElementById("telegrampBtnGr").onclick = telegram;
+          </script>
+        </a>
+
+        <!-- Whatasapp -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i id="whatsapBtnGr" class="btn btn-link bi bi-whatsapp" title="Whatsapp"></i>
+          <script>
+            document.getElementById("whatsapBtnGr").onclick = whatsapp;
+          </script>
+        </a>
+        <!-- Telefono -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i id="telefBtnGr" class="btn btn-link bi bi-phone" title="Celular"></i>
+          <script>
+            document.getElementById("telefBtnGr").onclick = telefono;
+          </script>
+        </a>
+        <!-- Imprimir -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i id="ImpresorafBtnGr" class="btn btn-link bi bi-printer" title="Impresora"></i>
+          <script>
+            document.getElementById("ImpresorafBtnGr").onclick = impresora;
+          </script>
+        </a>
+      </section>
+      <!-- fin Section: Social media -->
+    </div>
+    <!-- fin container -->
+
+    <!-- inicio Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:<Br>Luis Godoy
+    </div>
+    <!-- fin Copyright -->
+  </footer>
+  <!-- FIN PIE DE PÁGINA -->
+</body>
+
+</html>

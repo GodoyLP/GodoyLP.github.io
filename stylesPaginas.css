@@ -1,0 +1,126 @@
+/* Aca se encuentra los estilos para las paginas Formacoin-Experiencia-datoPresonal*/
+
+.secundaria-pagina {
+  background-color: #febebc;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+}
+
+h1,
+h3 {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  color: black;
+}
+h6 {
+  margin-left: 45px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: left;
+  color: black;
+}
+
+.col-md-3 {
+  margin: 3px;
+  background-color: #f2c9cf;
+  border: 5px solid aliceblue;
+}
+
+.col-md-8 {
+  margin: 3px;
+  padding: 3px;
+  background-color: #f2c9cf;
+  border: 5px solid aliceblue;
+}
+
+/*ESTILOS PAGINA FORMACCION ACADEMICA */
+
+/*porcentaje adquerido inicializado */
+:root {
+  --porcentajeIngles: 0%;
+  --progresoOffice: 0%;
+  --progresoNavegadores: 0%;
+  --progresoDos: 0%;
+  --progresoLinux: 0%;
+  --progresoWin: 0%;
+  --progresoHtml: 0%;
+  --progresoSql: 0%;
+  --progresoAbpa: 0%;
+  --progresoCmasmas: 0%;
+  --progresoJava: 0%;
+  --progresoUml: 0%;
+  --progresoRedes: 0%;
+}
+#progresoIngles {
+  width: var(--porcentajeIngles);
+}
+
+#progresoOffice {
+  width: var(--progresoOffice);
+}
+#progresoNavegadores {
+  width: var(--progresoNavegadores);
+}
+#progresoDos {
+  width: var(--progresoDos);
+}
+#progresoLinux {
+  width: var(--progresoLinux);
+}
+#progresoWin {
+  width: var(--progresoWin);
+}
+#progresoHtml {
+  width: var(--progresoHtml);
+}
+#progresoSql {
+  width: var(--progresoSql);
+}
+#progresoAbpa {
+  width: var(--progresoAbpa);
+}
+#progresoCmasmas {
+  width: var(--progresoCmasmas);
+}
+#progresoJava {
+  width: var(--progresoJava);
+}
+#progresoUml {
+  width: var(--progresoUml);
+}
+#progresoRedes {
+  width: var(--progresoRedes);
+}
+
+.card {
+  background: #f2c9cf;
+  border: 1px solid #f2c9cf;
+  display: grid;
+  place-content: center;
+  width: auto;
+}
+
+.card-title {
+  height: 45px;
+  background-color: #febebc;
+  border: 2px transparent #a97e7d;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.card-text {
+  border: 1px solid #febebc;
+}
+
+.card-body {
+  background-color: #f2c9cf;
+}
+
+/*EXPERIENCIA */
+
+.experincia {
+  text-align: center;
+}
