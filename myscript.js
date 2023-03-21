@@ -4,7 +4,7 @@
 const datosPostulante = {
   nombre: ['Luis', 'Pedro'],
   apellido: 'Godoy',
-  fecha_naciemiento: 14/01/1979,
+  fecha_naciemiento: 14 / 01 / 1979,
   nacionalidad: 'Argentino',
   genero: 'masculino',
   direccion: 'Bartolme Hidalgo 1823',
@@ -14,32 +14,36 @@ const datosPostulante = {
 }
 
 function descripcionPostulante() {
-  document.write("Soy una persona proactiva, alta responsabilidad, buena comunicación,"+
-  " con ganas de trabajar, aprender y desarrollarme dentro de la empresa. Tengo experiencia en soporte"+
-  " técnico y conocimiento de base de datos, programación y me encuentro promediando la carrera de Analista"+
-  " de sistemas de computación.");
+  document.write("Soy una persona proactiva, alta responsabilidad, buena comunicación," +
+    " con ganas de trabajar, aprender y desarrollarme dentro de la empresa. Tengo experiencia en soporte" +
+    " técnico y conocimiento de base de datos, programación y me encuentro promediando la carrera de Analista" +
+    " de sistemas de computación.");
 }
 
 /*inicio funcones pagina datosPersonales */
 
 function nombreCompleto() {
- document.write(datosPostulante.nombre[0]+" "+datosPostulante.nombre[1]+" "+datosPostulante.apellido);
+  document.write(datosPostulante.nombre[0] + " " + datosPostulante.nombre[1] + " " + datosPostulante.apellido);
 }
 
-function fichaPersonal(){
-  document.write("Nombre y Apellido : "+ datosPostulante.nombre[0]+" "+datosPostulante.nombre[1]+" "+datosPostulante.apellido +
-  "<br>Genero : "+datosPostulante.genero + "<br>Nacionalidad : " + datosPostulante.nacionalidad + "<br>Direccion: "+
-  datosPostulante.direccion+"<br>Celular: "+datosPostulante.celular+"<br>Telefono : "+datosPostulante.telefono+
-  "<br>E-mail :"+datosPostulante.email);
+function fichaPersonal() {
+  document.write("Nombre y Apellido : " + datosPostulante.nombre[0] + " " + datosPostulante.nombre[1] + " " + datosPostulante.apellido +
+    "<br>Genero : " + datosPostulante.genero + "<br>Nacionalidad : " + datosPostulante.nacionalidad + "<br>Direccion: " +
+    datosPostulante.direccion + "<br>Celular: " + datosPostulante.celular + "<br>Telefono : " + datosPostulante.telefono +
+    "<br>E-mail :" + datosPostulante.email);
 }
 /*fin funcones pagina datosPersonales */
 
 /**BOTONOS**/
 /*boton telefono mostrar numero*/
-function telefono() {
-  alert("Puedes llamar a "+datosPostulante.nombre[0] +" al siguiente celular\n"+datosPostulante.celular );
-};
 
+function telefono() {
+  Swal.fire(
+    'Quieres llamar ' + datosPostulante.nombre[0] + '?',
+    datosPostulante.celular,
+    'question'
+  )
+}
 
 /*boton whatsapp abrir en la web*/
 function whatsapp() {
@@ -57,12 +61,25 @@ function telegram() {
   }).click();
 };
 
-/*boton gmail abrir en la web*/
-function gmail() {
-  if (window.confirm("Quiere enviar e-mail a "+datosPostulante.nombre+"?")){
-    window.open(enviar_gmail(), "Gracias!");
-  }
-};
+/*boton enviar email abrir en la web*/
+
+function email() {
+  Swal.fire({
+    title: "Quiere enviar e-mail a " + datosPostulante.nombre[0] + "?",
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: 'Gmail',
+    denyButtonText: 'Outlook',
+  }).then((result) => {
+
+    if (result.isConfirmed) {
+      enviar_gmail();
+    } else if (result.isDenied) {
+      enviar_outlook()
+    }
+  })
+}
+
 
 /*boton imprimir */
 function impresora() {
@@ -74,10 +91,17 @@ function impresora() {
 function enviar_gmail() {
   Object.assign(document.createElement("a"), {
     target: "_blank",
-    href: "https://mail.google.com/mail/u/0/?hl=es-419#inbox?compose=DmwnWrRqhKQDGddmNpTSnNhjhmBvWksFqwhdHdkHGNQQDFhHXTTZNJlFZTLGRQDJKqpvBRwKpgnq"
-    //href: "https://mail.google.com/mail/u/0/?hl=es-419#inbox?compose=new"
+    href: "https://mail.google.com/mail/u/0/?hl=es-419#inbox?compose=new",
   }).click();
 };
+
+function enviar_outlook() {
+  Object.assign(document.createElement("a"), {
+    target: "_blank",
+    href: "https://outlook.live.com/mail/0/",
+  }).click();
+};
+
 
 /*boton abre pagina datoPersonal.html*/
 function datosPersoanles() {

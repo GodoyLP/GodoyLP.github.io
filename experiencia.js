@@ -11,6 +11,7 @@ class Expereincia {
     this.actividad4 = actividad4;
     this.actividad5 = actividad5;
     this.actividad6 = actividad6;
+  
   }
 }
 
@@ -32,9 +33,9 @@ let experiencia7 = new Expereincia("02/2020","Actualidad","Puesto Soporte Técni
 "Creación plataforma virtual y administración.","Creación de actividades y trabajos prácticos.","Administración de correos y respuesta.","Llenado de planillas y documentación.","Mantención de ordenadores personales.","Conexión remota.",);
 let experiencia8 = new Expereincia("01/2023","Actualidad","Reparacion Celular & Pcs (forma particular).","Dectecion de fallas.","Cambio de componentes defectuoso.","Instalcion de software.","Actualizaciones","Cambio de pantalla.","Remplazo de componente IC",);
 
-
 /*funcion muestra una expereincia laboral*/
 function experienciaLAboral(experiencia) {
+  
   document.write(
     "<h7 class=" + "card-title shadow p-3 mb-5 bg-white rounded" + ">De " +experiencia.fechaDsd +" hasta " +experiencia.fechaHst +"</h7><h5 class=" +
     "card-subtitle" + "><strong>" + experiencia.puesto + ":</strong></h5><p class=" + "card-text" + "><ul>" +
@@ -43,7 +44,7 @@ function experienciaLAboral(experiencia) {
     "<li>" + experiencia.actividad3+ "</li>" +
     "<li>" + experiencia.actividad4+ "</li>" +
     "<li>" + experiencia.actividad5+ "</li>" +
-    "<li>" + experiencia.actividad16+ "</li></ul></p>"
+    "<li>" + experiencia.actividad6+ "</li></ul></p>"
   );
 }
 
